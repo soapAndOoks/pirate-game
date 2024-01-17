@@ -1,0 +1,205 @@
+<!DOCTYPE html!>
+<html lang="en">
+
+<head>
+  <title>Pirate Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <div class="flex-container">
+    <div class="flex-equal-child add-margin-right">
+      <div class="top-section">
+        <h3>The Pirate game</h3>
+        <table class="game-grid">
+          <tr>
+            <th></th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            <th>G</tr>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td id="A1"></td>
+            <td id="B1"></td>
+            <td id="C1"></td>
+            <td id="D1"></td>
+            <td id="E1"></td>
+            <td id="F1"></td>
+            <td id="G1"></td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td id="A2"></td>
+            <td id="B2"></td>
+            <td id="C2"></td>
+            <td id="D2"></td>
+            <td id="E2"></td>
+            <td id="F2"></td>
+            <td id="G2"></td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td id="A3"></td>
+            <td id="B3"></td>
+            <td id="C3"></td>
+            <td id="D3"></td>
+            <td id="E3"></td>
+            <td id="F3"></td>
+            <td id="G3"></td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td id="A4"></td>
+            <td id="B4"></td>
+            <td id="C4"></td>
+            <td id="D4"></td>
+            <td id="E4"></td>
+            <td id="F4"></td>
+            <td id="G4"></td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td id="A5"></td>
+            <td id="B5"></td>
+            <td id="C5"></td>
+            <td id="D5"></td>
+            <td id="E5"></td>
+            <td id="F5"></td>
+            <td id="G5"></td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td id="A6"></td>
+            <td id="B6"></td>
+            <td id="C6"></td>
+            <td id="D6"></td>
+            <td id="E6"></td>
+            <td id="F6"></td>
+            <td id="G6"></td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td id="A7"></td>
+            <td id="B7"></td>
+            <td id="C7"></td>
+            <td id="D7"></td>
+            <td id="E7"></td>
+            <td id="F7"></td>
+            <td id="G7"></td>
+          </tr>
+        </table>
+          <div class='flex-container'>
+            <div class="flex-equal-child add-margin-right">
+              <h5>Shield:</h5>
+              <div class="effects-box" id="shieldEffect">☓</div>
+            </div>
+            <div class="flex-equal-child add-margin-right">
+              <h5>Mirror:</h5>
+              <div class="effects-box" id="mirrorEffect">☓</div>
+            </div>
+            <div class="flex-equal-child add-margin-right">
+              <h5><label for='hitlist'>Hitlist:</label></h5>
+              <textarea id="hitlist" class="hitlist-box"></textarea>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div>
+        <h5><label for="cash">CASH</label></h5>
+        <textarea id="cash">MONEY: 0&#10;BANK: 0</textarea>
+      </div>
+    </div>
+
+    <div class="flex-equal-child add-margin-right">
+      <div class="top-section">
+        <h4>Put one of each of these on your grid...</h4>
+        <h4>
+          <span id="rob">
+            <img class='box sidebar-images' src='./images/gameIcons/rob.png' alt='pirate ship'/>
+            ✔ Rob someones's points 
+          </span>
+          <br/>
+          <span id="kill">
+            <img class='box sidebar-images' src='./images/gameIcons/kill.png' alt='pirate ship'/>
+            ✔ Kill Someone
+          </span>
+          <br/>
+          <span id="present">
+            <img class='box sidebar-images' src='./images/gameIcons/present.jpg' alt='pirate ship'/>
+            ✔ Present - give someone 1000 
+          </span>
+          <br/>
+          <span id="skull">
+            <img class='box sidebar-images' src='./images/gameIcons/skull.jpg' alt='pirate ship'/>
+            ✔ Skull and Crossbones:
+            <br/>
+            <span class="sidebar-images"></span>
+            <small>-500 points from a row or column of desks in the room</small>
+          </span>
+            <br/>
+          <span id="swap">
+            <img class='box sidebar-images' src='./images/gameIcons/swap.png' alt='pirate ship'/>          
+            ✔ Swap Scores
+          </span>
+          <br/>
+          <span id="choose">
+            <img class='box sidebar-images' src='./images/gameIcons/choose.png' alt='pirate ship'/>
+            ✔ Choose next square
+          </span>
+          <br/>
+          <span id="shield">
+            <img class='box sidebar-images' src='./images/gameIcons/shield.png' alt='pirate ship'/>
+            Shield - Block the Bad
+          </span>
+          <br/>
+          <span id="mirror">
+            <img class='box sidebar-images' src='./images/gameIcons/mirror.png' alt='pirate ship'/>
+            Miror - Reflect the Bad
+          </span>
+          <br/>
+          <span id="bomb">
+            <img class='box sidebar-images' src='./images/gameIcons/bomb.png' alt='pirate ship'/>
+            Bomb - YOU go to zero
+          </span>
+          <br/>
+          <span id="double">
+            <img class='box sidebar-images' src='./images/gameIcons/double.jpg' alt='pirate ship'/>
+            Double your score
+          </span>
+          <br/>
+          <span id="bank">
+            <img class='box sidebar-images' src='./images/gameIcons/bank.jpg' alt='pirate ship'/>
+            Bank your score
+          </span>
+        </h4>
+        <br/>
+      </div>
+      <hr>
+      <div>
+        <h4>Now put these in...</h4>
+        <h4>
+          <div id="5000">
+           <span class="box">5000</span> x 1
+          </div>
+          <div id="3000">
+            <span class="box">3000</span> x 2
+          </div>
+          <div id="1000">
+            <span class="box">1000</span> x 10
+          </div>
+          <div id="200">
+            <span class="box">200</span> x 25
+          </div>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <script src='script.js'></script>
+</body>
+<html/>
