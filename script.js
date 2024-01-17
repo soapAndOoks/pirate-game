@@ -173,10 +173,11 @@ function handleChooseSquare(id){
     case 'present':
       money -= 1000;
       if (money < 0){money = 0;}
+      break;
     case 'skull':
       break;
     case 'swap':
-      money += Number(window.prompt('How much did you get?'));
+      money = Number(window.prompt('How much did you swap for?'));
       break;
     case 'choose':
       break;
@@ -186,11 +187,14 @@ function handleChooseSquare(id){
       break;
     case 'bomb':
       money = 0;
+      break;
     case 'double':
       money *= 2;
+      break;
     case 'bank':
       bank = money;
       money = 0;
+      break;
     default:
       console.error('The board is empty when the game has started');
   }
